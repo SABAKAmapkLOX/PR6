@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Практическая работа №6" Height="285" Width="450" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,22 +19,22 @@
             <Label Content="Первое число"/>
             <TextBox x:Name="tbOneTriardFirstNumber" Text="" Margin="5"/>
             <Label Content="Второе число"/>
-            <TextBox x:Name="tbTwoTriardFirstNumber" Text=""/>
+            <TextBox x:Name="tbTwoTriardFirstNumber" Text="" Margin="5"/>
             <Label Content="Третье число"/>
-            <TextBox x:Name="tbThreeTriardFirstNumber" Text=""/>
+            <TextBox x:Name="tbThreeTriardFirstNumber" Text="" Margin="5"/>
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="1">
             <Label Content="Первое число"/>
-            <TextBox x:Name="tbOneTriardSecondNumber" Text="" />
+            <TextBox x:Name="tbOneTriardSecondNumber" Text="" Margin="5"/>
             <Label Content="Второе число"/>
-            <TextBox x:Name="tbTwoTriardSecondNumber" Text=""/>
+            <TextBox x:Name="tbTwoTriardSecondNumber" Text="" Margin="5"/>
             <Label Content="Третье число"/>
-            <TextBox x:Name="tbThreeTriardSecondNumber" Text=""/>
+            <TextBox x:Name="tbThreeTriardSecondNumber" Text="" Margin="5"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button x:Name="btCalculation" Content="Cacl" Margin="5" Click="btCalculation_Click"/>
-            <Button x:Name="btInfo" Content="Info" Margin="5" Click="btInfo_Click"/>
-            <Button x:Name="btExit" Content="Exit" Margin="5" Click="btExit_Click"/>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="btCalculation" Content="Сравнение Триадов" Margin="5" Click="btCalculation_Click"/>
+            <Button x:Name="btInfo" Content="О программе" Margin="5" Click="btInfo_Click"/>
+            <Button x:Name="btExit" Content="Выход" Margin="5" Click="btExit_Click"/>
         </StackPanel>
     </Grid>
 </Window>

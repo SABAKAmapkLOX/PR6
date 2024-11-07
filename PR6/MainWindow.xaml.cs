@@ -30,13 +30,13 @@ namespace PR6
 
         private void btInfo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Информация пока не заполненно");
+            MessageBox.Show("Сделал:Ермаков Павел \nГруппа:ИСП-34\nЗадание:Использовать класс Triad (тройка положительных чисел). Разработать операции\r\nопределения равенства/неравенства чисел true/false. Разработать операции \r\nпроверки полного равенства/неравенства чисел в триадах (a1,b1,c1) == (a2,b2,c2).");
         }
 
         private void btCalculation_Click(object sender, RoutedEventArgs e)
         {
-            Triard triardOne = new Triard();
-            Triard triardTwo = new Triard();
+            Triard triardFirst = new Triard();//Это то что мы будем сравнивать
+            Triard triardSecond = new Triard();//Будем сравнивать triardFirst с triardSecond
             bool boolOneFirstPositiveNumber = int.TryParse(tbOneTriardFirstNumber.Text, out int oneFirstPositiveNumber);
             bool boolTwoFirstPositiveNumber = int.TryParse(tbTwoTriardFirstNumber.Text, out int twoFirstPositiveNumber);
             bool boolThreeFirstPositiveNumber = int.TryParse(tbThreeTriardFirstNumber.Text, out int threeFirstPositiveNumber);
@@ -45,12 +45,12 @@ namespace PR6
             bool boolThreeSecondPositiveNumber = int.TryParse(tbThreeTriardSecondNumber.Text, out int threeSecondPositiveNumber);
             if (boolOneFirstPositiveNumber == true || boolTwoFirstPositiveNumber == true || boolThreeFirstPositiveNumber == true || boolOneSecondPositiveNumber == true || boolTwoSecondPositiveNumber == true || boolThreeSecondPositiveNumber == true)
             {
-                triardOne.SetParams(oneFirstPositiveNumber, twoFirstPositiveNumber, threeFirstPositiveNumber);
-                triardTwo.SetParams(oneSecondPositiveNumber, twoSecondPositiveNumber, threeSecondPositiveNumber);
-                if (triardOne == triardTwo) MessageBox.Show("Триады равны");
+                triardFirst.SetParams(oneFirstPositiveNumber, twoFirstPositiveNumber, threeFirstPositiveNumber);//Присваиваем для triardFirst значения
+                triardSecond.SetParams(oneSecondPositiveNumber, twoSecondPositiveNumber, threeSecondPositiveNumber);//Тут тоже самое
+                if (triardFirst == triardSecond) MessageBox.Show("Триады равны");
                 else MessageBox.Show("Триады не равны");
             }
-            else MessageBox.Show("Туда сюда");
+            else MessageBox.Show("Ввеведи циферки");
         }
     }
 }

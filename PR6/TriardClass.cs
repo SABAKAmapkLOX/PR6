@@ -11,16 +11,16 @@ namespace TriardClass
 {
     class Triard
     {
-        public int onePositiveNumber;
-        public int twoPositiveNumber;
-        public int threePositiveNumber;
+        public int onePositiveNumber;//Первое положительное число
+        public int twoPositiveNumber;//Второе положительное число
+        public int threePositiveNumber;//Третье положительное число
         public int OnePositiveNumber
         {
-            get
+            get//Возвращаем значение поля
             {
                 return onePositiveNumber;
             }
-            set
+            set//Устанавливаем значение поля
             {
                 if (value > 0) onePositiveNumber = value;
                 else MessageBox.Show("В первом числе меньше нуля");
@@ -51,11 +51,11 @@ namespace TriardClass
                 else MessageBox.Show("В третьем числе меньше нуля");
             }
         }
-        public int SumNumber()
+        public int SumNumber()//Возвращаем сумму положительных чисел
         {
             return OnePositiveNumber + TwoPositiveNumber + ThreePositiveNumber;
         }
-        public void SetParams(int oneSetParams, int twoSetParams, int threeSetParams)
+        public void SetParams(int oneSetParams, int twoSetParams, int threeSetParams)//Перегрузка методов
         {
             OnePositiveNumber = oneSetParams;
             TwoPositiveNumber = twoSetParams;
@@ -73,7 +73,9 @@ namespace TriardClass
             TwoPositiveNumber = oneSetParams;
             ThreePositiveNumber = oneSetParams;
         }
-        public static bool operator ==(Triard c1, Triard c2)
+        public static bool operator ==(Triard c1, Triard c2)//Перегрузим две операции сравнения.
+                                                            //Сами операторы сравнения сравнивают значения свойств
+                                                            //Всех положительных чисел и в зависимости от результата сравнения возвращают либо true, либо false.
         {
             bool result;
             if (c1.onePositiveNumber == c2.onePositiveNumber && c1.twoPositiveNumber == c2.twoPositiveNumber && c1.threePositiveNumber == c2.threePositiveNumber) result = true;
